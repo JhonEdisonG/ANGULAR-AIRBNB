@@ -1,0 +1,149 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo h1 {
+  color: #ec4899;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #ec4899;
+}
+
+/* Main Content */
+.content {
+  padding: 2rem 1rem;
+}
+
+.property-details {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Feedback Form */
+.payment-form {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.payment-form h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: #4b5563;
+  background-color: #f9fafb;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #ec4899;
+}
+
+/* Rating Stars */
+.rating {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.rating i {
+  font-size: 2rem;
+  color: #d1d5db;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.rating i:hover,
+.rating i.selected {
+  color: #ec4899;
+}
+
+button.reserve-btn {
+  padding: 1rem;
+  background-color: #ec4899;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s;
+  margin-top: 1.5rem;
+}
+
+button.reserve-btn:hover {
+  background-color: #db2777;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+}

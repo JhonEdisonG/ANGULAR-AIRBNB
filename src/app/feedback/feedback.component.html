@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Reserva</title>
+  <link rel="stylesheet" href="/src/app/feedback/feedback.component.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" type="image/jpeg">
+  <!-- Agregar Font Awesome para las estrellas -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="header">
+    <h1 class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Logo">
+      AIRBNB
+    </h1>
+    <nav>
+      <a href="/page" class="back-btn">← Volver al Inicio</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <div class="property-details">
+      <div id="feedback-form" class="payment-form">
+        <h3>Deja tu Feedback</h3>
+        <form id="feedback-details" class="payment-details">
+          <div class="form-group">
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rating">Calificación (1-5):</label>
+            <div class="rating">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+            <input type="hidden" id="rating" name="rating" required>
+          </div>
+          <button type="submit" class="reserve-btn">Enviar Feedback</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AIRBNB. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="/src/app/feedback/feedback.component.ts"></script>
+</body>
+</html>

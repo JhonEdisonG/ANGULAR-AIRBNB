@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Reservas</title>
+  <link rel="stylesheet" href="/estilos/styles.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" type="image/jpeg">
+</head>
+<body class="bg-gray-100">
+  <header class="header">
+    <h1 class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Logo">
+      AIRBNB
+    </h1>
+    <nav>
+      <a href="/page" class="back-btn">← Volver al Inicio</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h2 class="section-title">Mis Reservas</h2>
+    <div id="reservations-container" class="grid-container">
+
+      <div *ngFor="let reservation of reservations" class="card">
+        <img [src]="reservation.img" alt="{{reservation.property_name}}">
+        <h3>{{reservation.property_name}}</h3>
+        <p>Entrada: {{reservation.in_time}}</p>
+        <p>Salida: {{reservation.out_time}}</p>
+        <p>Estado: {{reservation.status}}</p>
+        <a *ngIf="!reservation.isPast" [href]="'https://www.google.com/maps/dir/?api=1&destination=' + reservation.coordinates[0] + ',' + reservation.coordinates[1]" target="_blank" class="directions-btn">Cómo llegar</a>
+        <button *ngIf="reservation.isPast" (click)="leaveFeedback(reservation)" class="directions-btn">Dejar Feedback</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AIRBNB JH-LS. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

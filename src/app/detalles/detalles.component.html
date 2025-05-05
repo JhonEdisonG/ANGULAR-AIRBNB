@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de la Propiedad</title>
+  <link rel="stylesheet" href="./detalles.component.css">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" type="image/jpeg">
+</head>
+
+<body class="bg-gray-100">
+  <header class="header">
+    <h1 class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png" alt="Logo">
+      AIRBNB JH-LS
+    </h1>
+    <nav>
+      <a href="/page" class="back-btn">← Volver al Inicio</a>
+    </nav>
+  </header>
+
+  <main class="content" *ngIf="currentProperty">
+    <div class="property-details">
+      <img id="property-img" [src]="currentProperty.img" alt="Imagen de la propiedad">
+      <h2 id="property-title">{{ currentProperty.title }}</h2>
+      <p id="property-price">{{ currentProperty.price }}</p>
+      <p id="property-description">{{ currentProperty.description }}</p>
+      <p id="property-address">{{ currentProperty.address }}</p>
+      <ul id="property-amenities">
+        <li *ngFor="let amenity of currentProperty.amenities">{{ amenity }}</li>
+      </ul>
+      <a [routerLink]="['/reserva']" id="reserve-btn" class="directions-btn">Reservar</a>
+
+
+      <h3>Comentarios y Calificaciones</h3>
+      <div id="feedback-section">
+        <div *ngFor="let feedback of feedback" class="feedback-item">
+          <p><strong>Calificación:</strong> ⭐️{{ feedback.rating }}</p>
+          <p><strong>Comentario:</strong> {{ feedback.comments }}</p>
+        </div>
+        <div *ngIf="feedback.length === 0">
+          <p>No hay comentarios aún.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 AIRBNB JH-LS. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+
+</html>

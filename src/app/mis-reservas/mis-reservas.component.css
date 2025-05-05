@@ -1,0 +1,129 @@
+/* General */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.logo h1 {
+  color: #ec4899;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: #ec4899;
+}
+
+/* Main Content */
+.content {
+  padding: 2rem 1rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+/* Reservations Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card */
+.card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.directions-btn {
+  padding: 0.75rem;
+  background-color: #ec4899;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.directions-btn:hover {
+  background-color: #db2777;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+}
